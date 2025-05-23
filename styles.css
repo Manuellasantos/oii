@@ -1,0 +1,91 @@
+/* Resetando a margem e o padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cor de fundo e font padrão */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+/* Container para o efeito marquee */
+.marquee-container {
+    width: 80%;  
+    overflow: hidden;
+    position: relative;
+}
+
+/* Animação de marquee horizontal */
+.marquee {
+    display: flex;
+    animation: marquee 10s linear infinite;
+}
+
+/* Estilo do texto */
+.marquee p {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    white-space: nowrap;
+    margin-right: 50px;
+}
+
+/* Animação de rolagem */
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Efeito de fade-in */
+.fade-in {
+    animation: fadeInEffect 3s ease-out;
+}
+
+@keyframes fadeInEffect {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilizando os botões */
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #ff7e5f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #feb47b;
+}
+
+/* Estilo de transição suave */
+button:active {
+    transform: scale(0.98);
+}
