@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="scrip.js">
     <link rel="stylesheet" href="styles.css">
+    <script src="scrip.js" defer></script>
     <title>Oii</title>
 </head>
 <body>
-    <div class="titulo">
-        <p>Estou com fome </p>
-    </div> 
+    <div class="marquee-container">
+        <div class="marquee" id="texto-marquee">
+            <marquee behavior="" direction="right"><p>Olá, estou com fome</p></marquee>
+        </div>
+    </div>
+
+    <!-- Botões para mudar o estilo -->
+    <div class="buttons">
+        <button id="change-bg-btn">Mudar Cor de Fundo</button>
+        <button id="change-text-btn">Mudar Cor do Texto</button>
+    </div>
 </body>
 </html>
